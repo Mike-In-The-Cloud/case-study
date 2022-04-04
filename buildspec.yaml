@@ -9,11 +9,14 @@ phases:
       - "mv terraform /usr/local/bin/"
   pre_build:
     commands:
+      - pwd
+      - ls
+      - cd Profiles 
       - terraform init
 
   build:
     commands:
-      - terraform apply -var-file=../environment/intput_var.auto.tfvars -auto-approve
+      - terraform apply -var-file="../environment/intput_var.auto.tfvars" -auto-approve
 
   post_build:
     commands:
