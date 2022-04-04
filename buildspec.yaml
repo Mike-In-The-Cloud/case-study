@@ -9,6 +9,7 @@ phases:
       - "mv terraform /usr/local/bin/"
   pre_build:
     commands:
+      - cd Profiles
       - terraform init
 
   build:
