@@ -13,7 +13,7 @@ phases:
       - ls
       - cd terra 
       - ls
-      - terraform init
+      - TF_LOG=DEBUG terraform init
 
   build:
     commands:
