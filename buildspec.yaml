@@ -12,6 +12,7 @@ phases:
       - pwd
       - ls
       - cd Profiles 
+      - ls
       - terraform init
 
   build:
