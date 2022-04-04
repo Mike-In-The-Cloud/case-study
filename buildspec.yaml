@@ -11,7 +11,7 @@ phases:
     commands:
       - pwd
       - ls
-      - cd Profiles 
+      - cd terra 
       - ls
       - terraform init
 
