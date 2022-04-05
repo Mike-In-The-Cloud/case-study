@@ -14,6 +14,9 @@ terraform {
     key = "./terra/terraform.tfstate.d/dev/terraform.tfstate"
     region = "us-east-1"
   }
+  assume_role {
+    role_arn = "arn:aws:iam::165261241687:role/terraform-user-role"
+  }
 }
 
 module "casetsudy_vpc" {
