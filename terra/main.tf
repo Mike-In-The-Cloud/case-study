@@ -4,9 +4,6 @@ terraform {
       source  = "hashicorp/aws"
       version = "~> 3.0"
     }
-    assume_role {
-    role_arn = "arn:aws:iam::165261241687:role/terraform-user-role"
-  }
   }
   backend "s3" {
     encrypt = false
@@ -16,6 +13,9 @@ terraform {
     # dynamodb_table = "dynamodbtest"
     key = "./terra/terraform.tfstate.d/dev/terraform.tfstate"
     region = "us-east-1"
+    assume_role {
+      role_arn = "arn:aws:iam::165261241687:role/terraform-user-role"
+    }
   }
 }
 
