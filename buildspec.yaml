@@ -18,6 +18,7 @@ phases:
   build:
     commands:
       - terraform force-unlock -force OVG2GNE0VES7D82SK11I4SITMJVV4KQNSO5AEMVJF66Q9ASUAAJG
+      - terraform force-unlock -force CF02PFAG4K1G2GACQQCTMFFC0NVV4KQNSO5AEMVJF66Q9ASUAAJG
       - terraform apply -var-file="../environment/intput_var.auto.tfvars" -auto-approve
 
   post_build:
